@@ -1,0 +1,59 @@
+<nav
+  class="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow"
+>
+  <div
+    class="container px-4 mx-auto flex flex-wrap items-center justify-between"
+  >
+    <div
+      class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
+    >
+  
+      <button
+        class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+        type="button"
+        (click)="setNavbarOpen()"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div
+      class="lg:flex flex-grow items-center"
+      [ngClass]="{ hidden: !navbarOpen, block: navbarOpen }"
+      id="example-navbar-warning"
+    >
+      <ul class="flex flex-col lg:flex-row list-none mr-auto">
+        <li class="flex items-center">
+         <img src="assets/img/logo.jpg" alt="" style="max-width: 19%;height: auto">
+        </li>
+      </ul>
+      <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+        <!--<li class="flex items-center">
+          <app-index-dropdown class="block"></app-index-dropdown>
+        </li>-->
+     
+    <li class="flex items-center">
+  <a href="">Horaire de train</a>
+    </li>
+     
+        <li class="flex items-center">
+          <button
+            class="bg-red-600 text-white active:bg-red-700 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+            type="button" [routerLink]="['/auth/login']"
+          >
+            <i class="fas fa-arrow-alt-circle-down"></i>  Connexion
+          </button>
+       
+        </li>
+
+        <li class="flex items-center">
+          <button
+            class="bg-red-600 text-white active:bg-red-700 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+            type="button" [routerLink]="['/auth/register']"
+          >
+            <i class="fas fa-arrow-alt-circle-down"></i>  Inscription
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,76 @@
+<style>
+    .contact-form{
+        background: #fff;
+        margin-top: 10%;
+        margin-bottom: 5%;
+        width: 70%;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .contact-image{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .contact-image img{
+        border-radius: 6rem;
+        width: 11%;
+        margin-top: -3%;
+        transform: rotate(29deg);
+    }
+    .contact-form form{
+        padding: 0;
+    }
+    .contact-form form label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+    .contact-form form input{
+        width: 100%;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        margin-bottom: 1rem;
+    }
+    .contact-form form .submit-button {
+        width: 100%;
+        border: none;
+        border-radius: 1rem;
+        padding: 1rem;
+        background: #0062cc;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    .contact-form form .submit-button:hover {
+        background: #004799;
+    }
+</style>
+<div class="container contact-form">
+    <div class="contact-image">
+        <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h1>Reclamation </h1>
+        <label for="lieuDepart">Lieu de départ:</label>
+        <input type="text" id="lieuDepart" formControlName="lieuDepart">
+    
+        <label for="lieuArrivee">Lieu d'arrivée:</label>
+        <input type="text" id="lieuArrivee" formControlName="lieuArrivee">
+    
+        <label for="heureDepart">Heure de départ:</label>
+        <input type="text" id="heureDepart" formControlName="heureDepart">
+    
+        <label for="heureArrivee">Heure d'arrivée:</label>
+        <input type="text" id="heureArrivee" formControlName="heureArrivee">
+    
+        <label for="description">Description:</label>
+        <input type="text" id="description" formControlName="description">
+    
+        
+
+      <button type="submit" class="submit-button">Reclamer</button>
+    </form>
+</div>
